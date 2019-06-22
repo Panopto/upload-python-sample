@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/UniversalCaptureSpecification/v1">
+  <Title>Primary video only</Title>
+  <Description>This session has just a primary video</Description>
+  <Date>2018-05-09T10:00:00Z</Date>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <File Checksum="10ba731f">example.mp4</File>
+      <Type>Primary</Type>
+    </Video>
+  </Videos>
+</Session>

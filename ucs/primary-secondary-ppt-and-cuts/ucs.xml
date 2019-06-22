@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Session xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://tempuri.org/UniversalCaptureSpecification/v1">
+  <Title>Test session with audio, video and a presentation</Title>
+  <Description>Test session with audio, video and a presentation</Description>
+  <Date>2018-01-15T00:00:00.000-00:00</Date>
+  <Videos>
+    <Video>
+      <Start>PT0S</Start>
+      <File>primary.mp4</File>
+      <Cuts/>
+      <TableOfContents>
+        <Entry>
+          <Title>This entry will be removed</Title>
+          <Description>Because of the cuts below this entry won't be in the final output</Description>
+          <Url/>
+          <Time>PT0S</Time>
+        </Entry>
+        <Entry>
+          <Title>This entry will be in the table of contents and load a URL</Title>
+          <Description>This entry will load a URL in the secondary window</Description>
+          <Url>https://www.youtube.com/embed/2ojV3mhEno0</Url>
+          <Time>PT20S</Time>
+        </Entry>
+      </TableOfContents>
+      <Type>Audio</Type>
+      <Transcripts/>
+    </Video>
+    <Video>
+      <Start>PT10S</Start>
+      <File>secondary.mp4</File>
+      <Cuts/>
+      <TableOfContents/>
+      <Type>Secondary</Type>
+      <Transcripts/>
+    </Video>
+  </Videos>
+  <Presentations>
+    <Presentation>
+      <Start>PT0S</Start>
+      <File>Presentation.pptx</File>
+      <SlideChanges>
+        <SlideChange>
+          <Title>Title slide</Title>
+          <Description/>
+          <Url/>
+          <Time>PT5S</Time>
+          <SlideNumber>1</SlideNumber>
+        </SlideChange>
+        <SlideChange>
+          <Title>Second slide</Title>
+          <Description/>
+          <Url/>
+          <Time>PT15S</Time>
+          <SlideNumber>2</SlideNumber>
+        </SlideChange>
+      </SlideChanges>
+    </Presentation>
+  </Presentations>
+  <Images/>
+  <Cuts>
+    <Cut>
+      <Start>PT0S</Start>
+      <Duration>PT5S</Duration>
+    </Cut>
+  </Cuts>
+  <Tags/>
+  <Extensions/>
+  <Attachments/>
+</Session>

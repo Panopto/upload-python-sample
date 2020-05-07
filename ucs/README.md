@@ -9,7 +9,7 @@ Sample contents are included in the sub-directory.
 2. If you do not have Python 3 on your system, install the latest stable version from https://python.org
 3. Install external modules for this application.
 ```
-pip install reqeusts oauthlib requests_oauthlib
+pip install requests oauthlib requests_oauthlib
 pip install boto3
 ```
 

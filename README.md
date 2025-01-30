@@ -2,7 +2,7 @@
 
 This repository includes sample applications which demonstrate how you may upload video files and construct Panopto sessions by using Panopto upload API and Universal Content Specification (a.k.a. UCS).
 
-- [simplest](simplest): a minimum applicaiton to upload a single video file.
+- [simplest](simplest): a minimum application to upload a single video file.
 - [ucs](ucs): the application to upload UCS content folder and sample UCS contents.
 
 ## License

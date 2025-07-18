@@ -24,6 +24,22 @@ pip install boto3
 9. The rest can be blank. Click "Create API Client" button.
 10. Note the created Client ID and Client Secret.
 
+### Configure S3 Client for Panopto Uploads
+Panopto's upload process involves interacting with an S3-compatible service. To maintain compatibility with this upload flow, the S3 client used in `boto3` must explicitly be set to use the `s3v4` signing protocol. This is a required configuration for correctly uploading to Panopto's S3-compatible upload targets.
+
+This configuration has already been implemented in the provided sample application, specifically in the `panopto_uploader.py` file. However, if you are encountering issues with upload failures, you should ensure that the S3 client is correctly initialized with the `Config(signature_version='s3v4')`.
+
+For example:
+
+s3 = boto3.session.Session().client(
+    service_name='s3',
+    endpoint_url=service_endpoint,  # Replace with your service endpoint
+    verify=self.ssl_verify,        	# SSL verification configuration
+    aws_access_key_id='dummy',     	# Dummy credentials
+    aws_secret_access_key='dummy', 	# Dummy credentials
+    config=boto3.session.Config(signature_version='s3v4')
+)
+
 ## Determine the target folder ID
 1. Navigate to the target folder on Panopto web site
 2. Click gear icon at the top-right corner.
@@ -45,6 +61,9 @@ Type ```python upload.py --help``` for more command line options.
 
 ### Warning
 This sample application intentionally does not include error handling or retry logic in order to focus on the usage of API. As the best practice, you should have both proper error handling and reasonable retry logic in production code.
+
+### Panopto Upload API and S3 Client Configuration
+The sample application is already configured to use the `s3v4` signing protocol when interacting with Panopto's upload services (see "### Configure S3 Client for Panopto Uploads" section). If you encounter any issues with upload failures, revisit that section for further details on this configuration.
 
 ### Capture traffic
 It is useful to capture the actual network traffic by the capture tool, like [Fiddler on Windows](https://www.telerik.com/fiddler) and [Charles on Mac](https://www.charlesproxy.com/), and examine it.

@@ -138,7 +138,7 @@ class PanoptoUploader:
             verify = self.ssl_verify,
             aws_access_key_id='dummy',
             aws_secret_access_key = 'dummy',
-            config=boto3.session.Config(signature_version='s3v4')
+            config=boto3.session.Config(signature_version='s3')
         )
         
         # Initiate multipart upload.
